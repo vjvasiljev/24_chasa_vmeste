@@ -1,7 +1,5 @@
 body {
-    background-image: url('white-texture.jpg');
-    background-repeat: repeat;
-    background-size: 5%;
+    background-color: #f2f2f2;
   }
 
   h3 {
