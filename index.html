@@ -37,22 +37,138 @@ and is wrapped around the whole page content, except for the footer in this exam
         <!-- Blog entries -->
         <div class="w3-col l12 s12">
           <!-- Blog entry -->
-          <div class="w3-card-4 w3-margin w3-white">
+          <div>
             <div class="w3-container">
               <h3 style="text-align: center">
                 <b id="heading">Правила</b>
               </h3>
             </div>
             <div class="w3-container">
-              <ul>
-                <li><img src="logo.png" alt="Icon 1" class="icon" /> Item 1</li>
-                <li>
-                  <img src="icon2.png" alt="Icon 2" class="icon" /> Item 2
-                </li>
-                <li>
-                  <img src="icon3.png" alt="Icon 3" class="icon" /> Item 3
-                </li>
-              </ul>
+              <div class="w3-row"></div>
+              <div class="w3-col s12">
+                <p>
+                  Это игра создана для улучшения ваших отношений. Выбираете
+                  задание, сканируете с помощью телефона QR код и вперед на
+                  встречу приключениям. Обратите внимание на иконки рядом с
+                  каждым заданием. Они намекают вам, что вы можете ожидать,
+                  выполняя определенное задание. Их расшифровку вы найдете ниже.
+                  Внизу каждого задания написано сколько примерно времени оно
+                  займет.
+                </p>
+                <p>
+                  Если задание было отсканировано, нет обратного пути. Вы
+                  обязаны его выполнить. Не подсматривать! Сканируйте только
+                  вместе и только после того, как выполните предыдущее задание.
+                </p>
+                <p>
+                  Во время выполнения задания вам нужно сфотографироваться и
+                  потом вклеить фотографию на место задания на плакате.
+                  Максимальный размер фото - 10 см х 15 см. Ваша цель -
+                  заполнить плакат своими фотографиями и выставить его дома.
+                </p>
+                <h3 style="text-align: center">
+                  <br />
+                  <b id="heading">Иконки</b>
+                </h3>
+              </div>
+              <script>
+                const iconsText = [
+                  {
+                    iconUrl: 1,
+                    iconText:
+                      "Деньги - если указан 0, затрат не будет. Цифры это примерные затраты. Где не указанно, там всё зависит от вас.",
+                  },
+                  {
+                    iconUrl: 2,
+                    iconText:
+                      "День - это задание лучше делать в светлое время суток.",
+                  },
+                  {
+                    iconUrl: 3,
+                    iconText:
+                      "Вечер/ночь - это задание лучше делать в темное время суток.",
+                  },
+                  {
+                    iconUrl: 4,
+                    iconText: "Пара - это задания только для вас двоих.",
+                  },
+                  {
+                    iconUrl: 5,
+                    iconText:
+                      "Коллектив - эти задания вы можете выполнить как вдвоем, так и с кем то.",
+                  },
+                  {
+                    iconUrl: 6,
+                    iconText:
+                      "Дом - подразумевает что задание лучше делать дома или оно закончиться дома.",
+                  },
+                  {
+                    iconUrl: 7,
+                    iconText: "Игра - включайте свою игривость и шалость.",
+                  },
+                  {
+                    iconUrl: 8,
+                    iconText:
+                      "Краски - задание будет творческое или креативное",
+                  },
+                  {
+                    iconUrl: 9,
+                    iconText:
+                      "Свеча - романтический знак, возможно при выполнение задания у вас будет интимные разговоры или действия.",
+                  },
+                  {
+                    iconUrl: 10,
+                    iconText: "Продуктовая коляска - надо будет что-то купить.",
+                  },
+                  {
+                    iconUrl: 11,
+                    iconText:
+                      "Кит - детство, при выполнение этих заданий давайте своему внутреннему ребенку раскрыться.",
+                  },
+                  {
+                    iconUrl: 12,
+                    iconText:
+                      "Пленка - задание будет связанно с фото, видео или кино.",
+                  },
+                  {
+                    iconUrl: 13,
+                    iconText:
+                      "Навигация - задание потребует определенного места для выполнения.",
+                  },
+                  {
+                    iconUrl: 14,
+                    iconText:
+                      "Яблоко - в этом задание вы сможете вкусно поесть.",
+                  },
+                  {
+                    iconUrl: 15,
+                    iconText: "Машина - уезжаем куда подальше.",
+                  },
+                ];
+
+                const container = document.querySelector(".w3-row");
+
+                iconsText.forEach((item) => {
+                  const div = document.createElement("div");
+                  div.classList.add("w3-col", "s3");
+
+                  const img = document.createElement("img");
+                  img.classList.add("icon");
+                  img.src = "icons/" + item.iconUrl + ".png";
+                  div.appendChild(img);
+
+                  container.appendChild(div);
+
+                  const div2 = document.createElement("div");
+                  div2.classList.add("w3-col", "s8");
+
+                  const span = document.createElement("span");
+                  span.textContent = item.iconText;
+                  div2.appendChild(span);
+
+                  container.appendChild(div2);
+                });
+              </script>
             </div>
           </div>
           <hr />
