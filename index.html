@@ -1,18 +1,204 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <title>My Website</title>
+    <title>24 Часа Вместе</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Raleway"
+    />
+    <style>
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-family: "Raleway", sans-serif;
+      }
+    </style>
   </head>
-  <body>
-    <header>
-      <img src="logo.png" alt="Logo" />
-      <h1>My Website</h1>
-    </header>
-    <main>
-      <p>
-        Welcome to my website. This is a beautiful responsive website with a
-        title, some text, and a logo on top.
-      </p>
-    </main>
+  <body class="w3-light-grey">
+    <!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+    <div class="w3-content" style="max-width: 1400px">
+      <!-- Header -->
+      <header class="w3-container w3-center w3-padding-32">
+        <img src="logo.png" alt="Logo" width="70%" />
+        <!-- <h1><b>24 Часа Вместе</b></h1> -->
+        <!-- <p>Игра для парочек</p> -->
+      </header>
+
+      <!-- Grid -->
+      <div class="w3-row">
+        <!-- Blog entries -->
+        <div class="w3-col l12 s12">
+          <!-- Blog entry -->
+          <div class="w3-card-4 w3-margin w3-white">
+            <div class="w3-container">
+              <h3 style="text-align: center">
+                <b id="heading"></b>
+              </h3>
+            </div>
+            <div class="w3-container">
+              <p id="paragraph"></p>
+            </div>
+          </div>
+          <hr />
+
+          <!-- END Introduction Menu -->
+        </div>
+
+        <!-- END GRID -->
+      </div>
+      <br />
+
+      <!-- END w3-content -->
+    </div>
   </body>
+  <script>
+    // Define variables
+    var fileName = location.pathname.split("/").pop();
+    fileName = fileName.replace(".html", "");
+    fileName = parseInt(fileName);
+
+    let jsonList = [
+      {
+        title: 0,
+        text: 0,
+      },
+      {
+        title: "Домашний ресторан",
+        text: "Пришло время романтического ужина. Ваша задача - совместно приготовить особенное блюдо. Не забудьте красиво одеться для этого случая. Конечно, ужин не будет полным без свечей и шампанского.",
+      },
+      {
+        index: 3,
+        title: "Item 3",
+        text: "Text for item 3",
+      },
+      {
+        index: 4,
+        title: "Item 4",
+        text: "Text for item 4",
+      },
+      {
+        index: 5,
+        title: "Item 5",
+        text: "Text for item 5",
+      },
+      {
+        index: 6,
+        title: "Item 6",
+        text: "Text for item 6",
+      },
+      {
+        index: 7,
+        title: "Item 7",
+        text: "Text for item 7",
+      },
+      {
+        index: 8,
+        title: "Item 8",
+        text: "Text for item 8",
+      },
+      {
+        index: 9,
+        title: "Item 9",
+        text: "Text for item 9",
+      },
+      {
+        index: 10,
+        title: "Item 10",
+        text: "Text for item 10",
+      },
+      {
+        index: 11,
+        title: "Item 11",
+        text: "Text for item 11",
+      },
+      {
+        index: 12,
+        title: "Item 12",
+        text: "Text for item 12",
+      },
+      {
+        index: 13,
+        title: "Item 13",
+        text: "Text for item 13",
+      },
+      {
+        index: 14,
+        title: "Item 14",
+        text: "Text for item 14",
+      },
+      {
+        index: 15,
+        title: "Item 15",
+        text: "Text for item 15",
+      },
+      {
+        index: 16,
+        title: "Item 16",
+        text: "Text for item 16",
+      },
+      {
+        index: 17,
+        title: "Item 17",
+        text: "Text for item 17",
+      },
+      {
+        index: 18,
+        title: "Item 18",
+        text: "Text for item 18",
+      },
+      {
+        index: 19,
+        title: "Item 19",
+        text: "Text for item 19",
+      },
+      {
+        index: 20,
+        title: "Item 20",
+        text: "Text for item 20",
+      },
+      {
+        index: 21,
+        title: "Item 21",
+        text: "Text for item 21",
+      },
+      {
+        index: 22,
+        title: "Item 22",
+        text: "Text for item 22",
+      },
+      {
+        index: 22,
+        title: "Item 22",
+        text: "Text for item 22",
+      },
+      {
+        index: 22,
+        title: "Item 22",
+        text: "Text for item 22",
+      },
+      {
+        index: 22,
+        title: "Item 22",
+        text: "Text for item 22",
+      },
+    ];
+
+    console.log(jsonList[fileName]); // Outputs the item with the title "Item 5"
+
+    var heading = jsonList[fileName].title;
+
+    var paragraph = jsonList[fileName].text;
+
+    // Set the content of the elements
+    document.getElementById("heading").innerHTML = heading;
+    document.getElementById("paragraph").innerHTML = paragraph;
+  </script>
 </html>
